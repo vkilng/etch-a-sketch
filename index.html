@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="index.css">
+        <title>Etch-a-Sc=ketch</title>
+    </head>
+    <body>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="5" value="1" class="slider" id="myRange">
+            <p id="pixelsize">Cell size: 16 pixels</p>
+            <p id="gridorder">Grid layout: 30 x 60</p>
+            <p id="clearSketchPad" onclick="clear_SketchPad()">Clear SketchPad</p>
+        </div>
+        <div id="sketchpad"></div>
+    </body>
+    <script src="index.js"></script>
+</html>
