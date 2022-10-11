@@ -82,6 +82,7 @@ document.getElementById('sketchpad').addEventListener('mouseover',(e)=>{
 });
 
 function clear_SketchPad() {
+    let cell_arr = document.getElementsByClassName('cell');
     for(let elem of cell_arr) {
         elem.style.backgroundColor = 'white';
     };
