@@ -24,21 +24,26 @@
     width: 960px; height: 480px;
     border: solid 1px black;
 }
-[id^='r'] div:hover{
+
+.cell.pen:hover{
     background-color: black!important;
 }
+.cell.eraser:hover{
+    background-color: white!important;
+}
+
 #pixelsize, #gridorder{
     font-size: 20px;
     text-align: center;
 }
-#clearSketchPad{
+#clearSketchPad, #eraserbtn{
     border: solid 2px black;
     padding: 10px;
     font-size: 18px;
     text-align: center;
     cursor: pointer;
 }
-#clearSketchPad:hover{
-    background-color: black;
-    color: white;
+#clearSketchPad:hover, #eraserbtn:hover{
+    background-color: black!important;
+    color: white!important;
 }
