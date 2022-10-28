@@ -25,7 +25,11 @@ function sketchpad(sv) {
             let pixel = document.createElement('div');
             row.appendChild(pixel);
             //Setting properties of pixel element
-            pixel.className = 'cell pen';
+            if (eraser) {
+                pixel.className = 'cell eraser';
+            } else {
+                pixel.className = 'cell pen';
+            };
             pixel.style.display = 'block';
             pixel.style.userSelect = 'none';
             pixel.style.width = pixel_size + 'px';
@@ -53,7 +57,6 @@ document.getElementById('eraserbtn').addEventListener('click',(e)=>{
             element.classList.add('pen');
         };
     };
-    console.log(cell_arr);
 });
 
 let tooldown = false;
@@ -78,7 +81,7 @@ document.getElementById('sketchpad').addEventListener('mouseover',(e)=>{
             } else {
                 e.target.style.backgroundColor = 'white';
             };
-        }
+        };
     };
 });
 

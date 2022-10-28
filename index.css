@@ -25,11 +25,16 @@
     border: solid 1px black;
 }
 
+.cell{
+    user-select: none;
+}
 .cell.pen:hover{
     background-color: black!important;
 }
 .cell.eraser:hover{
     background-color: white!important;
+    outline: 1px solid black!important;
+    outline-offset: -1px;
 }
 
 #pixelsize, #gridorder{
