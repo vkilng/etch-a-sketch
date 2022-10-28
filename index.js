@@ -60,19 +60,20 @@ let tooldown = false;
 document.getElementById('sketchpad').addEventListener('mousedown',(ev)=>{
     tooldown = true;
     if(ev.target.className) {
-        if(eraser == false) {
+        if(eraser === false) {
             ev.target.style.backgroundColor = 'black';
         } else {
             ev.target.style.backgroundColor = 'white';
         }
     };
 });
-document.getElementById('sketchpad').addEventListener('mouseup',()=>tooldown=false);
+
+document.addEventListener('mouseup',()=>tooldown=false);
 
 document.getElementById('sketchpad').addEventListener('mouseover',(e)=>{
     if(e.target.className) {
         if(tooldown)  {
-            if(eraser == false){
+            if(eraser === false){
                 e.target.style.backgroundColor = 'black';
             } else {
                 e.target.style.backgroundColor = 'white';
